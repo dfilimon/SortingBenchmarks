@@ -11,10 +11,11 @@ function drawPlots(prefix)
   for i = 1 : length(files)
     printf("%s %s\n", files(i).name(), colors(i));
     fileHandle = fopen(files(i).name, "r");
-    all = fscanf(fileHandle, "%d");
+    all = fscanf(fileHandle, "%d", 500);
     x = all(1 : 2 : end);
     y = all(2 : 2 : end);
-    p = polyfit(x, y, 2);    
+
+    #p = polyfit(x, y, 2);    
     #plot(x, polyval(p, x), [colors(i), ""], "LineWidth", 1)
     plot(x, y, [colors(i), "x"], "MarkerSize", 2)
 

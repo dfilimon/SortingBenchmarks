@@ -14,8 +14,8 @@ algorithms = ['mergesort',
               ,'insertionsort',
               'bubblesort']
 """
-numMax = 100
-numSteps = 10
+numMax = 1000000
+numSteps = 500
 
 def main():
     # compile java code
@@ -31,11 +31,13 @@ def main():
     octave = subprocess.Popen(['./draw_plots.m'])
     octave.wait()
 
+    """
     # clean up nasty benchmark files
     for fileName in os.listdir('.'):
         pos = string.rfind(fileName, '.benchmark')
         if pos >= 0 and pos == len(fileName) - len('.benchmark'):
             os.remove(fileName)
-            
+    """
+    
 if __name__ == "__main__":
     main()

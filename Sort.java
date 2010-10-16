@@ -39,7 +39,8 @@ class Sort {
 	v[j] = aux;
     }
 
-    // using this to check the correctness of the sorting methods
+    // use this to check the correctness of the sorting methods
+    // isn't actually used right now; if adding other algs, please test them
     public static boolean isSorted(int[] v) {
 	for (int i = 1; i < v.length; ++ i)
 	    if (v[i - 1] > v[i])
@@ -61,7 +62,7 @@ class Sort {
 	long start = System.nanoTime();
 	mergesort(v, 0, v.length - 1);
 	long end = System.nanoTime();
-	System.out.println(isSorted(v));
+	// System.out.println(isSorted(v));
 	return end - start;
     }
         
@@ -78,7 +79,7 @@ class Sort {
 	long start = System.nanoTime();
 	quicksort(v, 0, v.length - 1);
 	long end = System.nanoTime();
-	System.out.println(isSorted(v));
+	// System.out.println(isSorted(v));
 	return end - start;
     }
 
@@ -116,7 +117,7 @@ class Sort {
 	int maxDepth = (int) (Math.log(v.length) / Math.log(2));
 	introsort(v, 0, v.length - 1, maxDepth);
 	long end = System.nanoTime();
-	System.out.println(isSorted(v));
+	// System.out.println(isSorted(v));
 	return end - start;
     }
 
@@ -131,7 +132,7 @@ class Sort {
 	    v[j + 1] = e;
 	}
 	long end = System.nanoTime();
-	System.out.println(isSorted(v));
+	// System.out.println(isSorted(v)); 
 	return end - start;
     }
 
@@ -148,7 +149,7 @@ class Sort {
 		}
 	}
 	long end = System.nanoTime();
-	System.out.println(isSorted(v));
+	// System.out.println(isSorted(v));
 	return end - start;
     }
 }
