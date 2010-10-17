@@ -1,0 +1,20 @@
+SortingBenchmarks
+---
+
+Can benchmark int sorting algorithms coded in Java in Sort.java and draw plots of running time.
+
+To run with default values, run:
+./benchmark.py
+
+Modify the parameters in that script to go to a different maximum number of elements.
+If you add a new algorithm to Sort.java, and want to benchmark it, try running isSorted() on the array after calling your method to see if it actually works. To actually benchmark, add the method name to the algortihms array in benchmark.py.
+
+You can also benchmark it separately by calling java SortingBenchmarks <numMax> <numSteps> <methodName>. See source code for more info.
+If you want to plot, it's a good idea to use ./benchmark because otherwise graphs will be uneven.
+
+Important
+---
+
+You must have textread available for Octave. If it's not installed by default, you can usually find it in a package called octave-io in your distribution's repos.
+
+Have fun!
